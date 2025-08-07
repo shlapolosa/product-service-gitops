@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: product-service-config
+  namespace: product-service
+data:
+  APP_ENV: "production"
+  SERVICE_NAME: "product-service"
+  DATABASE_URL: "postgresql://$DATABASE_USER:$DATABASE_PASSWORD@product-service-postgres-rw.product-service.svc.cluster.local:5432/product-service"
